@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"  routerLink="/home">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Definitivas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let nota of notas;">
+      <ion-card >
+        <ion-card-header>          
+          <ion-card-title>Estudiante :{{nota.estudiante}}</ion-card-title>
+          <ion-card-subtitle>Asignatura : {{nota.asignatura.nombre}}</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-label>Primer Corte : {{nota.cortes[0].definitiva}}</ion-label>
+          <ion-label>Segundo Corte : {{nota.cortes[1].definitiva}}</ion-label>
+          <ion-label>Tercer Corte : {{nota.cortes[2].definitiva}}</ion-label>
+          <ion-label>Definitiva : {{nota.definitiva}}</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"  routerLink="/home">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>asignaturas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >
+    <ion-item *ngFor="let asignatura of asignaturas;">
+      <ion-label>Nombre : {{asignatura.nombre}} , codigo: {{asignatura.codigo}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

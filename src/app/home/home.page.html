@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calificaciones
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,49 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-tabs>
+
+    <ion-tab tab="tab-schedule">
+      <ion-nav></ion-nav>
+    </ion-tab>
+  
+    <ion-tab tab="tab-speaker">
+      <ion-nav></ion-nav>
+    </ion-tab>
+  
+    <ion-tab tab="tab-map" component="page-map">
+      <ion-nav></ion-nav>
+    </ion-tab>
+  
+    <ion-tab tab="tab-about" component="page-about">
+      <ion-nav></ion-nav>
+    </ion-tab>
+  
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="tab-schedule" routerLink="/asignatura">
+        <ion-icon name="bookmarks"></ion-icon>
+        <ion-label>Asignatura</ion-label>
+        <ion-badge>0</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="tab-speaker" routerLink="/asignaturaList">
+        <ion-icon name="logo-buffer"></ion-icon>
+        <ion-label>Asignaturas</ion-label>
+        <ion-badge>0</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="tab-map" routerLink="/notas">
+        <ion-icon name="calculator"></ion-icon>
+        <ion-label>Calcular Notas</ion-label>
+        <ion-badge>0</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="tab-about" routerLink="/notasList">
+        <ion-icon name="clipboard"></ion-icon>
+        <ion-label>Calificaciones</ion-label>
+        <ion-badge>0</ion-badge>
+      </ion-tab-button>
+    </ion-tab-bar>
+  
+  </ion-tabs>
 </ion-content>

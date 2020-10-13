@@ -1,0 +1,198 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"  routerLink="/home">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>notas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formAdd" (submit)="save()" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Identificación del estudiante</ion-label>
+        <ion-input formControlName="estudiante"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Código de la asignatura</ion-label>
+        <ion-input formControlName="asignatura"></ion-input>
+      </ion-item>
+      <br>
+      <ion-label>Corte 1</ion-label>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota quiz</ion-label>
+            <ion-input formControlName="quizU"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% quiz [0-100]</ion-label>
+          <ion-input formControlName="pQuizU" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota talleres</ion-label>
+            <ion-input formControlName="tallerU"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% talleres [0-100]</ion-label>
+            <ion-input formControlName="pTallerU"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota parcial práctico</ion-label>
+            <ion-input formControlName="parcialPracticoU"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% práctico[0-100]</ion-label>
+            <ion-input formControlName="pParcialPracticoU"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota parcial téorico</ion-label>
+            <ion-input formControlName="parcialTeoricoU"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% téorico[0-100]</ion-label>
+            <ion-input formControlName="pParcialTeoricoU"></ion-input> 
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-label>Corte 2</ion-label>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota quiz</ion-label>
+            <ion-input formControlName="quizD"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% quiz [0-100]</ion-label>
+            <ion-input formControlName="pQuizD"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota talleres</ion-label>
+            <ion-input formControlName="tallerD"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% talleres [0-100]</ion-label>
+            <ion-input formControlName="pTallerD"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota parcial práctico</ion-label>
+            <ion-input formControlName="parcialPracticoD"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% práctico[0-100]</ion-label>
+            <ion-input formControlName="pParcialPracticoD"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota parcial práctico</ion-label>
+            <ion-input formControlName="parcialTeoricoD"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% téorico[0-100]</ion-label>
+            <ion-input formControlName="pParcialTeoricoD"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-label>Corte 3</ion-label>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota quiz</ion-label>
+            <ion-input formControlName="quiz3"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% quiz [0-100]</ion-label>
+            <ion-input formControlName="pQuiz3"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota talleres</ion-label>
+            <ion-input formControlName="taller3"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% talleres [0-100]</ion-label>
+            <ion-input formControlName="pTaller3" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota parcial práctico</ion-label>
+            <ion-input formControlName="parcialPractico3"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% práctico[0-100]</ion-label>
+            <ion-input formControlName="pParcialPractico3"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nota parcial téorico</ion-label>
+            <ion-input formControlName="parcialTeorico3"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">% téorico[0-100]</ion-label>
+            <ion-input formControlName="pParcialTeorico3"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+    <ion-button expand="block" shape="round" type="submit" [disabled]="!formAdd.valid">
+      Agregar
+    </ion-button>
+  </form>
+</ion-content>

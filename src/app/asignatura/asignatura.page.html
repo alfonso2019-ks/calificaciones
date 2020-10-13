@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start"  routerLink="/home">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Asignatura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formAdd" (submit)="save()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Código</ion-label>
+        <ion-input formControlName="codigo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="nombre"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" shape="round" type="submit" [disabled]="!formAdd.valid">
+      Agregar
+    </ion-button>
+  </form>
+</ion-content>
